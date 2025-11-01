@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申辦流程 - 好貸智Plus+</title>
+    <style>
+        body {
+            background-color: #646262;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .contact-button:hover {
+            background-color: #e64a19;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            background-color: #444;
+            border-radius: 15px;
+            padding: 2.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            transition: all 0.3s;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(206, 126, 21, 0.3);
+        }
+
+        .step-number {
+            background-color: #ce7e15;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: #ce7e15;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .step {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white; text-align: center;">好貸智Plus+</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="index.html#about">關於我們 About</a></li>
+                <li><a href="loan-plans.html">貸款方案 Loan Plans</a></li>
+                <li><a href="process.html">申辦流程 Process</a></li>
+                <li><a href="faq.html">常見問題 FAQ</a></li>
+                <li><a href="https://line.me/ti/p/Tbbywe86ES" class="contact-button" target="_blank">聯絡我們 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">申辦流程</h1>
+        
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>聯繫專員</h3>
+                    <p>聯繫專員後專員依照基礎條件做額度初審</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>到店辦理</h3>
+                    <p>安排時間到店辦理送件</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>當天審核</h3>
+                    <p>當天審核，當下知道結果</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>快速撥款</h3>
+                    <p>現金撥款/匯款指定帳戶皆可選擇！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2025 HoDaZhiPlus+. All rights reserved.</p>
+    </footer>
+</body>
+</html>

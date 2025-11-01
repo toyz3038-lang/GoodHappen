@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貸款方案 - 好貸智Plus+</title>
+    <style>
+        body {
+            background-color: #646262;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .contact-button:hover {
+            background-color: #e64a19;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .loans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .loan-card {
+            background-color: #444;
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .loan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(206, 126, 21, 0.3);
+        }
+
+        .loan-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .loan-card h3 {
+            color: #ce7e15;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .loan-card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white; text-align: center;">好貸智Plus+</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁 Home</a></li>
+                <li><a href="index.html#about">關於我們 About</a></li>
+                <li><a href="loan-plans.html">貸款方案 Loan Plans</a></li>
+                <li><a href="process.html">申辦流程 Process</a></li>
+                <li><a href="faq.html">常見問題 FAQ</a></li>
+                <li><a href="https://line.me/ti/p/Tbbywe86ES" class="contact-button" target="_blank">聯絡我們 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">貸款方案</h1>
+        
+        <div class="loans-grid">
+            <!-- 個人信貸 -->
+            <div class="loan-card">
+                <div class="icon">👤</div>
+                <h3>個人信貸</h3>
+                <p>提供給個人的無擔保貸款，無需提供擔保品或第三方保證</p>
+            </div>
+            
+            <!-- 整合貸款 -->
+            <div class="loan-card">
+                <div class="icon">🔄</div>
+                <h3>整合貸款</h3>
+                <p>將多筆高利率的貸款或信用卡債務合併成一筆較低利率的貸款方式，降低每月還款負擔和簡化財務管理</p>
+            </div>
+            
+            <!-- 負責人貸款 -->
+            <div class="loan-card">
+                <div class="icon">👔</div>
+                <h3>負責人貸款</h3>
+                <p>根據負責人公司財務狀況來評估，貸款人需提供詳細的財務報表</p>
+            </div>
+            
+            <!-- 軍公教貸款 -->
+            <div class="loan-card">
+                <div class="icon">🎖️</div>
+                <h3>軍公教貸款</h3>
+                <p>享有較低的利率和較長的還款期限</p>
+            </div>
+            
+            <!-- 汽車貸款 -->
+            <div class="loan-card">
+                <div class="icon">🚗</div>
+                <h3>汽車貸款</h3>
+                <p>汽車一胎、二胎增貸</p>
+            </div>
+            
+            <!-- 勞保貸款 -->
+            <div class="loan-card">
+                <div class="icon">🛡️</div>
+                <h3>勞保貸款</h3>
+                <p>提供給勞工的低利率貸款方案，通常以勞保年資、勞保保險金額等為基礎來核准貸款</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 詳細資訊 -->
+    <section style="margin-top: 3rem; text-align:left; background-color:#444; padding:3rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size:2.5rem; color:#FFFFFF; text-align:center; margin-bottom:2rem;">詳細資訊</h2>
+            
+            <div style="background-color: #555; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h3 style="color: #ce7e15; font-size: 1.5rem; margin-bottom: 1rem;">申請條件</h3>
+                <p style="color: #FFFFFF; line-height: 1.8; font-size: 1.1rem;">年滿18-65歲有正常工作之國民</p>
+            </div>
+            
+            <div style="background-color: #555; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h3 style="color: #ce7e15; font-size: 1.5rem; margin-bottom: 1rem;">貸款期限</h3>
+                <p style="color: #FFFFFF; line-height: 1.8; font-size: 1.1rem;">年金法本利平均攤還法：可分1~7年</p>
+            </div>
+            
+            <div style="background-color: #555; padding: 2rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                <h3 style="color: #ce7e15; font-size: 1.5rem; margin-bottom: 1rem;">檢附文件</h3>
+                <ul style="color: #FFFFFF; line-height: 1.8; font-size: 1.1rem; padding-left: 2rem;">
+                    <li>(1) 身分證</li>
+                    <li>(2) 健保卡</li>
+                    <li>(3) 健保投保明細</li>
+                    <li>(4) 勞保異動明細</li>
+                    <li>(5) 收入證明—近6個月薪轉存摺明細或密封式薪資單或扣繳憑單</li>
+                    <li>(依個案所需文件不同)</li>
+                </ul>
+            </div>
+            
+            <div style="background-color: #555; padding: 2rem; border-radius: 10px;">
+                <h3 style="color: #ce7e15; font-size: 1.5rem; margin-bottom: 1rem;">備註</h3>
+                <p style="color: #FFFFFF; line-height: 1.8; font-size: 1rem; margin-bottom: 1rem;">
+                    信貸還款年限：最低一年最長七年<br>
+                    本方案貸款機動年利率最低1.68%~最高15.98%，實際依核貸方案為準。實際貸款條件 (例：核貸金額、利率、月付金、帳管費、手續費、票查費、提前清償違約金、信用查詢費、開辦費…等) 視個別貸款產品及個人授信條件不同而有所差異，審核保留核貸額度、適用利率、年限期數與核貸與否之權利，詳細約定應以確定核准條件後為準。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 2rem; margin-top: 3rem;">
+        <p>&copy; 2025 HoDaZhiPlus+. All rights reserved.</p>
+    </footer>
+</body>
+</html>

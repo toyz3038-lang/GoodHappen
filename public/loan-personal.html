@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人信貸 - 好貸智Plus+</title>
+    <style>
+        body {
+            background-color: #646262;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-button {
+            background-color: #ff5722;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .contact-button:hover {
+            background-color: #e64a19;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content {
+            background-color: #444;
+            border-radius: 15px;
+            padding: 3rem;
+            color: white;
+        }
+
+        .content h1 {
+            color: #ce7e15;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background-color: #555;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .info-card h3 {
+            color: #ce7e15;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: #ce7e15;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: #a56a12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color: white; text-align: center;">好貸智Plus+</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">首頁 Home</a></li>
+                <li><a href="index.html#about">關於我們 About</a></li>
+                <li><a href="loan-plans.html">貸款方案 Loan Plans</a></li>
+                <li><a href="process.html">申辦流程 Process</a></li>
+                <li><a href="faq.html">常見問題 FAQ</a></li>
+                <li><a href="https://line.me/ti/p/Tbbywe86ES" class="contact-button" target="_blank">聯絡我們 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="icon">👤</div>
+            <h1>個人信貸</h1>
+            <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
+                提供給個人的無擔保貸款，無需提供擔保品或第三方保證，讓您快速獲得資金周轉。
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>申請條件</h3>
+                    <p>年滿20歲，有穩定收入，信用正常</p>
+                </div>
+                <div class="info-card">
+                    <h3>貸款額度</h3>
+                    <p>最高可貸300萬元</p>
+                </div>
+                <div class="info-card">
+                    <h3>貸款利率</h3>
+                    <p>2.5%起</p>
+                </div>
+                <div class="info-card">
+                    <h3>還款期限</h3>
+                    <p>最長7年</p>
+                </div>
+            </div>
+
+            <h2 style="color: #ce7e15; margin-top: 2rem;">申請優勢</h2>
+            <ul style="font-size: 1.1rem; line-height: 2;">
+                <li>免擔保、免保人</li>
+                <li>審核快速，最快當天核貸</li>
+                <li>手續簡便，只需基本資料</li>
+                <li>還款彈性，可提前還款無違約金</li>
+                <li>額度可循環使用</li>
+            </ul>
+
+            <a href="loan-plans.html" class="btn-back">← 返回貸款方案</a>
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 2rem;">
+        <p>&copy; 2025 HoDaZhiPlus+. All rights reserved.</p>
+    </footer>
+</body>
+</html>
