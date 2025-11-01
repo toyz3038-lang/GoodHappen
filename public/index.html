@@ -5,17 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>好貸智Plus+</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #646262; /* 使用提供的顏色作為網站底色 */
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
+        /* Header 樣式 */
+        header {
+            position: relative;
+            background-color: #333;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 1rem;
+        }
+
+        /* 漢堡選單按鈕 */
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
         /* 導覽列樣式 */
         nav {
             display: flex;
             justify-content: space-around;
-            background-color: #333; /* 恢復原始底色 */
+            background-color: #333;
             padding: 1rem;
         }
 
@@ -32,7 +85,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: white; /* 恢復原始字樣顏色 */
+            color: white;
             font-size: 1rem;
         }
 
@@ -53,12 +106,169 @@
         .contact-button:hover {
             background-color: #e64a19;
         }
+
+        /* RWD 響應式設計 */
+        @media (max-width: 768px) {
+            /* 顯示漢堡選單按鈕 */
+            .menu-toggle {
+                display: flex;
+            }
+
+            /* Header 標題樣式 */
+            header h1 {
+                font-size: 1.5rem;
+                padding-right: 3rem;
+            }
+
+            /* 導覽列在小螢幕上隱藏，點擊後顯示 */
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: #333;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 4rem 1rem 1rem;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+                width: 100%;
+            }
+
+            nav ul li {
+                margin: 0;
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                padding: 0.75rem 1rem;
+                width: 100%;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+            nav ul li a:hover {
+                background-color: #555;
+                text-decoration: none;
+            }
+
+            /* 當選單打開時，添加背景遮罩 */
+            .menu-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;
+            }
+
+            .menu-overlay.active {
+                display: block;
+            }
+
+            /* 主內容區域在行動裝置上添加內距 */
+            main {
+                padding: 0 1rem;
+            }
+
+            section#home > div {
+                padding: 1.5rem !important;
+                margin: 1rem 0 !important;
+            }
+
+            /* 標題字體縮小 */
+            h2 {
+                font-size: 2rem !important;
+            }
+
+            section#about h2 {
+                font-size: 2rem !important;
+            }
+
+            section#about {
+                padding: 1.5rem !important;
+            }
+
+            /* 卡片在小螢幕上改為全寬 */
+            div[style*="width:250px"] {
+                width: 100% !important;
+                max-width: 300px;
+            }
+
+            /* Footer 在小螢幕上改為單欄 */
+            footer > div > div[style*="grid"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            footer {
+                padding: 2rem 1rem !important;
+            }
+
+            /* 地圖在小螢幕上調整高度 */
+            footer iframe {
+                height: 250px !important;
+            }
+
+            footer div[style*="height: 300px"] {
+                height: 250px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* 超小螢幕的額外調整 */
+            h2 {
+                font-size: 1.5rem !important;
+            }
+
+            section#about h2 {
+                font-size: 1.5rem !important;
+            }
+
+            p[style*="font-size:1.5rem"] {
+                font-size: 1.2rem !important;
+            }
+
+            p[style*="font-size:2.0rem"] {
+                font-size: 1.5rem !important;
+            }
+
+            footer h3 {
+                font-size: 1.2rem !important;
+            }
+        }
+
+        /* 圖片響應式 */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
     <header>
-<h1 style="color: white;">好貸智Plus+</h1>
-        <nav>
+        <h1 style="color: white;">好貸智Plus+</h1>
+        <button class="menu-toggle" id="menuToggle" aria-label="選單">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-overlay" id="menuOverlay"></div>
+        <nav id="navMenu">
             <ul>
                 <li><a href="#home">首頁 Home</a></li>
                 <li><a href="#about">關於我們 About</a></li>
@@ -73,10 +283,10 @@
     <main>
         <section id="home">
            
-            <img src="consulting.jpg" alt="好貸智Plus+" style="width:100%; height:100%; display:block; margin:0;">
-            <div style="text-align:center; margin-top:1rem;">
+            <img src="consulting.jpg" alt="好貸智Plus+" style="width:100%; height:auto; display:block; margin:0;">
+            <div style="text-align:center; margin-top:0;">
             </div>
-            <div style="margin-top:2rem; text-align:center; background-color:#FFFFFF; padding:2rem; border-radius:10px;">
+            <div style="margin-top:0; text-align:center; background-color:#FFFFFF; padding:2rem; border-radius:10px; max-width:100%; box-sizing:border-box;">
 <h2 style="font-size: 36px;">好貸智Plus+</h2>
                 <p style="color:#ce7e15; font-size:1.5rem; margin-bottom:1.5rem;">增加你的過件率及撥款效率</p>
                 <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
@@ -96,7 +306,7 @@
                     </div>
                 </div>
             </div>
-            <section id="about" style="margin-top:0; text-align:center; background-color:#333; padding:2rem; border-radius:0;">
+            <section id="about" style="margin-top:0; text-align:center; background-color:#333; padding:2rem; border-radius:0; max-width:100%; box-sizing:border-box;">
                 <h2 style="font-size:2.5rem; color:#FFFFFF;">好貸智Plus+</h2>
                 <p style="font-size:1.2rem; margin-bottom:1.5rem; color:#FFFFFF;">
                     成立的初衷，是希望讓每一位客戶在需要資金時，都能以安心、便利、透明的方式獲得協助。
@@ -110,7 +320,7 @@
                     我們不僅是貸款代辦，更是您財務道路上的合作夥伴。讓每一次資金運用，都成為好事發生的起點。
                 </p>
             </section>
-            <div style="margin-top:0; text-align:center; background-color:#FFFFFF; padding:2rem; border-radius:0;">
+            <div style="margin-top:0; text-align:center; background-color:#FFFFFF; padding:2rem; border-radius:0; max-width:100%; box-sizing:border-box;">
                 <h2 style="font-size:2.5rem;">🌱 品牌理念</h2>
                 <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
                     <div style="border:3px solid #333; border-radius:20px; padding:1.5rem; width:250px; transition:transform 0.3s; text-align:center;">
@@ -189,5 +399,66 @@
         </div>
     </footer>
 
+    <script>
+        // 漢堡選單控制
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // 點擊選單連結時關閉選單
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // 平滑滾動到 #about
+        document.querySelector('a[href="#about"]')?.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#about').scrollIntoView({
+                behavior: 'smooth'
+            });
+            // 如果是手機版，關閉選單
+            if (window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        });
+
+        // 平滑滾動到 #home
+        document.querySelector('a[href="#home"]')?.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+            // 如果是手機版，關閉選單
+            if (window.innerWidth <= 768) {
+                toggleMenu();
+            }
+        });
+
+        // 視窗大小改變時，重置選單狀態
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 </html>
